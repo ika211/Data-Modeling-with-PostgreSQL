@@ -3,7 +3,7 @@ import pandas as pd
 import psycopg2
 import glob
 from src.scripts.sql_queries import *
-from src.scripts.create_tables import main as create_tables_proc
+# from src.scripts.create_tables import main as create_tables_proc
 
 
 def get_files(filepath):
@@ -22,7 +22,7 @@ def insert_table_from_df(df, cur, conn, sql_insert_query):
 
 
 def main():
-    create_tables_proc()
+    # create_tables_proc()
 
     conn = psycopg2.connect("host=127.0.0.1 dbname=sparkify user=postgres password=password")
     cur = conn.cursor()
